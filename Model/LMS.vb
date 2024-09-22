@@ -23,12 +23,8 @@ Public Class LMS
     Public Property Users As DbSet(Of User)
     Public Property Students As DbSet(Of Student)
     Public Property Books As DbSet(Of Book)
-End Class
 
-'Public Class MyEntity
-'    Public Property Id() As Int32
-'    Public Property Name() As String
-'End Class
+End Class
 
 Public Class User
     <Key>
@@ -57,15 +53,16 @@ End Class
 
 Public Class Book
     <Key>
+    Public Property Id() As Integer
     <Index(IsUnique:=True)>
     <MaxLength(13)>
     Public Property ISBN As String
     <Required>
     Public Property Title As String
     <Required>
-    Public Property Authors As String
-    <Required>
     Public Property Publisher As String
     <Required>
     Public Property YearPublished As Int32
+    <Required>
+    Public Property Authors As String
 End Class

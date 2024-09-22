@@ -26,12 +26,12 @@ Partial Class UserDialog
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.RoleTextBox = New System.Windows.Forms.ComboBox()
+        Me.RoleComboBox = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -80,7 +80,7 @@ Partial Class UserDialog
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.UsernameTextBox, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.RoleTextBox, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.RoleComboBox, 1, 2)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(12, 12)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
@@ -89,6 +89,33 @@ Partial Class UserDialog
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(408, 120)
         Me.TableLayoutPanel2.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 52)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(29, 13)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Role"
+        '
+        'PasswordTextBox
+        '
+        Me.PasswordTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(69, 29)
+        Me.PasswordTextBox.Name = "PasswordTextBox"
+        Me.PasswordTextBox.Size = New System.Drawing.Size(336, 20)
+        Me.PasswordTextBox.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Password"
         '
         'Label1
         '
@@ -108,43 +135,16 @@ Partial Class UserDialog
         Me.UsernameTextBox.Size = New System.Drawing.Size(336, 20)
         Me.UsernameTextBox.TabIndex = 1
         '
-        'Label2
+        'RoleComboBox
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Password"
-        '
-        'PasswordTextBox
-        '
-        Me.PasswordTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.RoleComboBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PasswordTextBox.Location = New System.Drawing.Point(69, 29)
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(336, 20)
-        Me.PasswordTextBox.TabIndex = 3
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 52)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(29, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Role"
-        '
-        'RoleTextBox
-        '
-        Me.RoleTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RoleTextBox.FormattingEnabled = True
-        Me.RoleTextBox.Items.AddRange(New Object() {"Admin", "User"})
-        Me.RoleTextBox.Location = New System.Drawing.Point(69, 55)
-        Me.RoleTextBox.Name = "RoleTextBox"
-        Me.RoleTextBox.Size = New System.Drawing.Size(336, 21)
-        Me.RoleTextBox.TabIndex = 5
+        Me.RoleComboBox.FormattingEnabled = True
+        Me.RoleComboBox.Items.AddRange(New Object() {"Adminstrator", "User"})
+        Me.RoleComboBox.Location = New System.Drawing.Point(69, 55)
+        Me.RoleComboBox.Name = "RoleComboBox"
+        Me.RoleComboBox.Size = New System.Drawing.Size(336, 21)
+        Me.RoleComboBox.TabIndex = 5
         '
         'UserDialog
         '
@@ -177,5 +177,5 @@ Partial Class UserDialog
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents UsernameTextBox As TextBox
-    Friend WithEvents RoleTextBox As ComboBox
+    Friend WithEvents RoleComboBox As ComboBox
 End Class

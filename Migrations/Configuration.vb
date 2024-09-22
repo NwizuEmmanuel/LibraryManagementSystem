@@ -22,7 +22,7 @@ Namespace Migrations
                 ' Seeding Users
                 context.Users.AddOrUpdate(
                 Function(u) u.Id,
-                New User() With {.Id = 1, .Username = "admin", .Password = "admin123", .Role = "Administrato"},
+                New User() With {.Id = 1, .Username = "admin", .Password = "admin123", .Role = "Administrator"},
                 New User() With {.Id = 2, .Username = "john_doe", .Password = "password123", .Role = "User"},
                 New User() With {.Id = 3, .Username = "jane_doe", .Password = "password456", .Role = "User"},
                 New User() With {.Id = 5, .Username = "susan_jones", .Password = "password101", .Role = "Administrator"},

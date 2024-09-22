@@ -112,6 +112,18 @@
       <DependentUpon>202409211349384_FirstCreate1.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202409211349384_FirstCreate1.vb" />
+    <Compile Include="Migrations\202409221408595_AddBookAuthorManyToMany.Designer.vb">
+      <DependentUpon>202409221408595_AddBookAuthorManyToMany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409221408595_AddBookAuthorManyToMany.vb" />
+    <Compile Include="Migrations\202409221411517_ReCreateTables.Designer.vb">
+      <DependentUpon>202409221411517_ReCreateTables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409221411517_ReCreateTables.vb" />
+    <Compile Include="Migrations\202409221424223_DeleteBookAuthorManyToMany.Designer.vb">
+      <DependentUpon>202409221424223_DeleteBookAuthorManyToMany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409221424223_DeleteBookAuthorManyToMany.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Model\LMS.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -134,12 +146,6 @@
       <DependentUpon>StudentDialog.vb</DependentUpon>
     </Compile>
     <Compile Include="StudentDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentForm.Designer.vb">
-      <DependentUpon>StudentForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="StudentForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LMSMainControl.Designer.vb">
@@ -171,6 +177,15 @@
     <EmbeddedResource Include="Migrations\202409211349384_FirstCreate1.resx">
       <DependentUpon>202409211349384_FirstCreate1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409221408595_AddBookAuthorManyToMany.resx">
+      <DependentUpon>202409221408595_AddBookAuthorManyToMany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409221411517_ReCreateTables.resx">
+      <DependentUpon>202409221411517_ReCreateTables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409221424223_DeleteBookAuthorManyToMany.resx">
+      <DependentUpon>202409221424223_DeleteBookAuthorManyToMany.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -179,9 +194,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDialog.resx">
       <DependentUpon>StudentDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentForm.resx">
-      <DependentUpon>StudentForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LMSMainControl.resx">
       <DependentUpon>LMSMainControl.vb</DependentUpon>

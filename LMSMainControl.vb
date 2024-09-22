@@ -53,4 +53,31 @@
             UserDialog.ShowDialog()
         End If
     End Sub
+
+    Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
+
+    End Sub
+
+
+    Private Sub DeleteUser()
+        Dim noProblem = True
+        For Each selectedRows As DataGridViewRow In DataGridView1.SelectedRows
+            Dim id = Convert.ToInt32(selectedRows.Cells("Id").Value)
+            Using context As New LMS()
+                Dim bookToDelete = context.Books.Find(id)
+
+                If bookToDelete IsNot Nothing Then
+                    context.Books.Remove(bookToDelete)
+                    context.SaveChanges()
+                Else
+                    noProblem = False
+                End If
+            End Using
+        Next
+        If noProblem Then
+            MessageBox.Show("Delete successful.")
+        Else
+            MessageBox.Show("Some or no item is deleted successfully.")
+        End If
+    End Sub
 End Class

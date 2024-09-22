@@ -15,23 +15,31 @@ Public Class StudentDialog
     End Function
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
-        Try
-            Using context As New LMS()
-                Dim students As New Student() With {
-                    .Firstname = FirstnameTextBox.Text,
-                    .Middlename = If(MiddlenameTextBox.Text <> Nothing, MiddlenameTextBox.Text, Nothing),
-                    .Lastname = LastnameTextBox.Text,
-                    .Course = CourseTextBox.Text,
-                    .Sex = GetSex()
-                }
-                context.Students.Add(students)
-                context.SaveChanges()
-            End Using
-            Me.DialogResult = System.Windows.Forms.DialogResult.OK
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        If String.IsNullOrEmpty(FirstnameTextBox.Text) Then
+            MessageBox.Show("Firstname is invalid")
+        ElseIf String.IsNullOrEmpty(LastnameTextBox.Text) Then
+            MessageBox.Show("Lastname is invalid")
+        ElseIf String.IsNullOrEmpty(CourseTextBox.Text) Then
+            MessageBox.Show("Course is invalid")
+        Else
+            Try
+                Using context As New LMS()
+                    Dim students As New Student() With {
+                        .Firstname = FirstnameTextBox.Text,
+                        .Middlename = If(MiddlenameTextBox.Text <> Nothing, MiddlenameTextBox.Text, Nothing),
+                        .Lastname = LastnameTextBox.Text,
+                        .Course = CourseTextBox.Text,
+                        .Sex = GetSex()
+                    }
+                    context.Students.Add(students)
+                    context.SaveChanges()
+                End Using
+                Me.DialogResult = System.Windows.Forms.DialogResult.OK
+                Me.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click

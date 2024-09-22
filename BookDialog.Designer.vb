@@ -27,23 +27,21 @@ Partial Class BookDialog
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.ISBNLabel = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ISBNTextBox = New System.Windows.Forms.TextBox()
         Me.TitleLabel = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TitleTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.AuthorDescLabel = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.PublisherTextBox = New System.Windows.Forms.TextBox()
         Me.PublisherLabel = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.PublisherYearNumricDropdown = New System.Windows.Forms.NumericUpDown()
+        Me.AuthorDescLabel = New System.Windows.Forms.Label()
+        Me.AuthorsTextBox = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PublisherYearNumricDropdown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -86,24 +84,21 @@ Partial Class BookDialog
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.ISBNLabel, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.ISBNTextBox, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.TitleLabel, 0, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox2, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.TitleTextBox, 1, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.FlowLayoutPanel1, 1, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 4)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox4, 1, 4)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox5, 1, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.PublisherLabel, 0, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 6)
-        Me.TableLayoutPanel2.Controls.Add(Me.NumericUpDown1, 1, 6)
+        Me.TableLayoutPanel2.Controls.Add(Me.PublisherTextBox, 1, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.PublisherLabel, 0, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.PublisherYearNumricDropdown, 1, 5)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(12, 12)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 7
+        Me.TableLayoutPanel2.RowCount = 6
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12.0!))
@@ -119,14 +114,14 @@ Partial Class BookDialog
         Me.ISBNLabel.TabIndex = 0
         Me.ISBNLabel.Text = "ISBN"
         '
-        'TextBox1
+        'ISBNTextBox
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ISBNTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(75, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(467, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.ISBNTextBox.Location = New System.Drawing.Point(75, 3)
+        Me.ISBNTextBox.Name = "ISBNTextBox"
+        Me.ISBNTextBox.Size = New System.Drawing.Size(467, 20)
+        Me.ISBNTextBox.TabIndex = 1
         '
         'TitleLabel
         '
@@ -137,15 +132,14 @@ Partial Class BookDialog
         Me.TitleLabel.TabIndex = 2
         Me.TitleLabel.Text = "Title"
         '
-        'TextBox2
+        'TitleTextBox
         '
-        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.TitleTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(75, 29)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(467, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.TitleTextBox.Location = New System.Drawing.Point(75, 29)
+        Me.TitleTextBox.Name = "TitleTextBox"
+        Me.TitleTextBox.Size = New System.Drawing.Size(467, 20)
+        Me.TitleTextBox.TabIndex = 3
         '
         'Label3
         '
@@ -160,7 +154,7 @@ Partial Class BookDialog
         '
         Me.FlowLayoutPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel1.Controls.Add(Me.TextBox3)
+        Me.FlowLayoutPanel1.Controls.Add(Me.AuthorsTextBox)
         Me.FlowLayoutPanel1.Controls.Add(Me.AuthorDescLabel)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(72, 54)
@@ -169,54 +163,19 @@ Partial Class BookDialog
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(473, 58)
         Me.FlowLayoutPanel1.TabIndex = 6
         '
-        'TextBox3
+        'PublisherTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(258, 30)
-        Me.TextBox3.TabIndex = 4
-        '
-        'AuthorDescLabel
-        '
-        Me.AuthorDescLabel.AutoSize = True
-        Me.AuthorDescLabel.Location = New System.Drawing.Point(3, 36)
-        Me.AuthorDescLabel.Name = "AuthorDescLabel"
-        Me.AuthorDescLabel.Size = New System.Drawing.Size(158, 13)
-        Me.AuthorDescLabel.TabIndex = 5
-        Me.AuthorDescLabel.Text = "use ',' for more than one authors"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 113)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Author(s)"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.PublisherTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox4.Location = New System.Drawing.Point(75, 116)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(467, 20)
-        Me.TextBox4.TabIndex = 8
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox5.Location = New System.Drawing.Point(75, 142)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(467, 20)
-        Me.TextBox5.TabIndex = 9
+        Me.PublisherTextBox.Location = New System.Drawing.Point(75, 115)
+        Me.PublisherTextBox.Name = "PublisherTextBox"
+        Me.PublisherTextBox.Size = New System.Drawing.Size(467, 20)
+        Me.PublisherTextBox.TabIndex = 9
         '
         'PublisherLabel
         '
         Me.PublisherLabel.AutoSize = True
-        Me.PublisherLabel.Location = New System.Drawing.Point(3, 139)
+        Me.PublisherLabel.Location = New System.Drawing.Point(3, 112)
         Me.PublisherLabel.Name = "PublisherLabel"
         Me.PublisherLabel.Size = New System.Drawing.Size(50, 13)
         Me.PublisherLabel.TabIndex = 10
@@ -225,18 +184,34 @@ Partial Class BookDialog
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 165)
+        Me.Label2.Location = New System.Drawing.Point(3, 138)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 13)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Publish Year"
         '
-        'NumericUpDown1
+        'PublisherYearNumricDropdown
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(75, 168)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(185, 20)
-        Me.NumericUpDown1.TabIndex = 12
+        Me.PublisherYearNumricDropdown.Location = New System.Drawing.Point(75, 141)
+        Me.PublisherYearNumricDropdown.Name = "PublisherYearNumricDropdown"
+        Me.PublisherYearNumricDropdown.Size = New System.Drawing.Size(185, 20)
+        Me.PublisherYearNumricDropdown.TabIndex = 12
+        '
+        'AuthorDescLabel
+        '
+        Me.AuthorDescLabel.AutoSize = True
+        Me.AuthorDescLabel.Location = New System.Drawing.Point(3, 26)
+        Me.AuthorDescLabel.Name = "AuthorDescLabel"
+        Me.AuthorDescLabel.Size = New System.Drawing.Size(158, 13)
+        Me.AuthorDescLabel.TabIndex = 5
+        Me.AuthorDescLabel.Text = "use ';' for more than one authors"
+        '
+        'AuthorsTextBox
+        '
+        Me.AuthorsTextBox.Location = New System.Drawing.Point(3, 3)
+        Me.AuthorsTextBox.Name = "AuthorsTextBox"
+        Me.AuthorsTextBox.Size = New System.Drawing.Size(467, 20)
+        Me.AuthorsTextBox.TabIndex = 4
         '
         'BookDialog
         '
@@ -259,7 +234,7 @@ Partial Class BookDialog
         Me.TableLayoutPanel2.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PublisherYearNumricDropdown, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -268,17 +243,15 @@ Partial Class BookDialog
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents ISBNLabel As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ISBNTextBox As TextBox
     Friend WithEvents TitleLabel As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TitleTextBox As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents AuthorDescLabel As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents PublisherTextBox As TextBox
     Friend WithEvents PublisherLabel As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents PublisherYearNumricDropdown As NumericUpDown
+    Friend WithEvents AuthorsTextBox As TextBox
+    Friend WithEvents AuthorDescLabel As Label
 End Class
