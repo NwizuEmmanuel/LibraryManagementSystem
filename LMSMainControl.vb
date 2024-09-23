@@ -50,7 +50,7 @@
         ElseIf _title = "Student Section" Then
             StudentDialog.ShowDialog()
         ElseIf _title = "User Section" Then
-            Dim userDialog As New UserDialog()
+            Dim userDialog As New UserDialog(commandType:="insert")
             userDialog.ShowDialog()
         End If
     End Sub

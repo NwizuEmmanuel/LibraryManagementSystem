@@ -82,8 +82,6 @@ Public Class UserDialog
                 context.Users.Add(user)
                 context.SaveChanges()
             End Using
-            Dim control As New LMSMainControl()
-            control.LoadUserData()
             Me.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.Close()
         End If
